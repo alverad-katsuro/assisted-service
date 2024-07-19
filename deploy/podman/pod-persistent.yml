@@ -43,8 +43,8 @@ spec:
   restartPolicy: Never
   volumes:
     - name: ai-data
-      persistentVolumeClaim:
-        claimName: ai-service-data
+      hostPath:
+        path: /home/alfredogdso/assistend-service-ai-data/
     - name: pg-data
       persistentVolumeClaim:
         claimName: ai-db-data
